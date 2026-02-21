@@ -192,9 +192,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     box-sizing: border-box;
 }
 
