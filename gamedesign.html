@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design | Brendan Sullivan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-top">
+        <a href="index.html" class="name-link">Brendan Sullivan</a>
+        <nav class="tabs">
+            <a href="projects.html" class="tab">Projects</a>
+            <a href="websites.html" class="tab">Websites</a>
+            <a href="gamedesign.html" class="tab active">Game Design</a>
+            <a href="contact.html" class="tab">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <!-- Roblox Games -->
+            <section class="roblox-section">
+                <h2>Roblox Games</h2>
+                <div class="game-cards">
+                    <div class="game-card">
+                        <div class="game-card-image">
+                            <div class="image-carousel" data-game="areyousure">
+                                <img src="games/areyousure-1.png" alt="Are You Sure?" class="carousel-img active">
+                                <img src="games/areyousure-2.png" alt="Are You Sure?" class="carousel-img">
+                                <img src="games/areyousure-3.png" alt="Are You Sure?" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>Are You Sure?</h3>
+                            <p>Comedic incremental simulator game based on the TV show "Invincible".</p>
+                            <div class="game-stats">
+                                <span>👥 1.9M+ Visits</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/118709296219918/Are-You-Sure" class="play-btn small" target="_blank">Play</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card-image">
+                            <img src="games/catan-1.png" alt="Settlers" class="single-img">
+                        </div>
+                        <div class="game-card-content">
+                            <h3>Settlers</h3>
+                            <p>A faithful recreation of the classic board game Catan, built for an online multiplayer experience.</p>
+                            <div class="game-stats">
+                                <span>🚧 Coming Soon</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/15871468358/Settlers" class="dev-btn small" target="_blank">In Development</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card-image">
+                            <div class="image-carousel" data-game="seeker">
+                                <img src="games/seeker-1.png" alt="The Seeker" class="carousel-img active">
+                                <img src="games/seeker-2.png" alt="The Seeker" class="carousel-img">
+                                <img src="games/seeker-3.png" alt="The Seeker" class="carousel-img">
+                                <img src="games/seeker-4.png" alt="The Seeker" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>The Seeker</h3>
+                            <p>A survival horror experience where players must outwit and escape a terrifying monster lurking in the shadows.</p>
+                            <div class="game-stats">
+                                <span>👥 400+ Visits</span>
+                            </div>
+                            <a href="https://www.roblox.com/games/4932435542/The-Seeker" class="play-btn small" target="_blank">Play</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roblox Banner -->
+                <section class="roblox-banner">
+                    <div class="roblox-banner-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Roblox_player_icon_black.svg/200px-Roblox_player_icon_black.svg.png" alt="Roblox" class="platform-logo" style="width: 50px; height: 50px; filter: brightness(0) invert(1);">
+                        <p>Explore my full portfolio of Roblox experiences and communities</p>
+                        <a href="https://www.roblox.com/users/20113824/profile" class="roblox-btn" target="_blank">
+                            Visit Roblox Profile
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Itch.io Games -->
+            <section class="games-grid-section">
+                <h2>Games</h2>
+                <div class="game-cards">
+                    <div class="game-card">
+                        <div class="game-card-image">
+                            <div class="image-carousel">
+                                <img src="games/love-1.png" alt="Love in Chernobyl" class="carousel-img active">
+                                <img src="games/love-2.png" alt="Love in Chernobyl" class="carousel-img">
+                                <img src="games/love-3.png" alt="Love in Chernobyl" class="carousel-img">
+                                <img src="games/love-4.png" alt="Love in Chernobyl" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>Love in Chernobyl</h3>
+                            <p>A narrative experience set in the haunting atmosphere of Chernobyl.</p>
+                            <div class="project-tags">
+                                <span class="tag">Narrative</span>
+                                <span class="tag">Atmospheric</span>
+                            </div>
+                            <a href="https://github.com/Finn383/GD2-Finding-Love-in-Chernobyl" class="play-btn small" target="_blank">Play</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card-image blurfit">
+                            <div class="image-carousel">
+                                <div class="blur-bg" style="background-image: url('games/thecastle-1.png')"></div>
+                                <img src="games/thecastle-1.png" alt="The Castle" class="carousel-img active" onload="updateBlur(this)">
+                                <img src="games/thecastle-2.png" alt="The Castle" class="carousel-img" onload="updateBlur(this)">
+                                <img src="games/thecastle-3.png" alt="The Castle" class="carousel-img" onload="updateBlur(this)">
+                                <button class="img-arrow prev" onclick="changeImageBlur(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImageBlur(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>The Castle</h3>
+                            <p>Description of your second itch.io game goes here.</p>
+                            <div class="project-tags">
+                                <span class="tag">Genre</span>
+                            </div>
+                            <a href="https://bmsullivan4.itch.io/the-castle" class="play-btn small" target="_blank">Play</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card-image">
+                            <img src="games/cinemoji.png" alt="CineMoji" class="single-img">
+                        </div>
+                        <div class="game-card-content">
+                            <h3>CineMoji</h3>
+                            <p>Description of your third itch.io game goes here.</p>
+                            <div class="project-tags">
+                                <span class="tag">Genre</span>
+                            </div>
+                            <a href="https://bmsullivan4.itch.io/" class="play-btn small" target="_blank">Play</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Itch.io Banner -->
+                <section class="itchio-banner">
+                    <div class="itchio-content">
+                        <img src="https://static.itch.io/images/itchio-textless-white.svg" alt="Itch.io" class="platform-logo" style="width: 50px; height: 50px;">
+                        <p>Discover more indie games on my Itch.io page</p>
+                        <a href="https://bmsullivan4.itch.io/" class="itchio-btn" target="_blank">
+                            Visit Itch.io Profile
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+            <script>
+                function changeImage(btn, direction) {
+                    const carousel = btn.parentElement;
+                    const images = carousel.querySelectorAll('.carousel-img');
+                    let currentIndex = 0;
+
+                    images.forEach((img, index) => {
+                        if (img.classList.contains('active')) {
+                            currentIndex = index;
+                        }
+                    });
+
+                    images[currentIndex].classList.remove('active');
+
+                    let newIndex = currentIndex + direction;
+                    if (newIndex >= images.length) newIndex = 0;
+                    if (newIndex < 0) newIndex = images.length - 1;
+
+                    images[newIndex].classList.add('active');
+                }
+
+                function changeImageBlur(btn, direction) {
+                    const carousel = btn.parentElement;
+                    const images = carousel.querySelectorAll('.carousel-img');
+                    const blurBg = carousel.querySelector('.blur-bg');
+                    let currentIndex = 0;
+
+                    images.forEach((img, index) => {
+                        if (img.classList.contains('active')) {
+                            currentIndex = index;
+                        }
+                    });
+
+                    images[currentIndex].classList.remove('active');
+
+                    let newIndex = currentIndex + direction;
+                    if (newIndex >= images.length) newIndex = 0;
+                    if (newIndex < 0) newIndex = images.length - 1;
+
+                    images[newIndex].classList.add('active');
+                    blurBg.style.backgroundImage = `url('${images[newIndex].src}')`;
+                }
+            </script>
+        </div>
+    </main>
+</body>
+</html>
