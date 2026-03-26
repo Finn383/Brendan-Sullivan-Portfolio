@@ -691,7 +691,6 @@ body {
 
 .game-card-image.blurfit {
     overflow: hidden;
-    aspect-ratio: 1 / 1;
 }
 
 .game-card-image.blurfit .image-carousel {
@@ -800,15 +799,11 @@ body {
 
 /* Roblox card slider */
 .roblox-slider-wrap {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    position: relative;
 }
 
 .game-cards-track {
-    flex: 1;
     overflow: hidden;
-    min-width: 0;
 }
 
 #robloxTrack {
@@ -824,7 +819,9 @@ body {
 }
 
 .cards-arrow {
-    flex-shrink: 0;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
     background: var(--bg-card);
     border: 1px solid var(--border);
     color: var(--text);
@@ -835,6 +832,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 20;
     transition: background 0.2s, border-color 0.2s, color 0.2s;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     font-size: 1rem;
@@ -845,6 +843,9 @@ body {
     border-color: transparent;
     color: white;
 }
+
+.cards-prev { left: -52px; }
+.cards-next { right: -52px; }
 
 /* Lightbox */
 .lightbox-overlay {
@@ -864,8 +865,9 @@ body {
 }
 
 .lightbox-img {
-    max-width: 90vw;
-    max-height: 88vh;
+    width: min(90vw, 1400px);
+    height: calc(min(90vw, 1400px) * 9 / 16);
+    max-height: 85vh;
     object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
@@ -1399,7 +1401,7 @@ body {
     }
 
     .roblox-slider-wrap {
-        display: block;
+        padding: 0;
     }
 
     .game-cards-track {
