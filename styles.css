@@ -308,8 +308,6 @@ h1, h2, h3, h4 {
    SECTION HEADERS
    ======================================== */
 .section-title,
-.roblox-section > .section-title,
-.games-grid-section > .section-title,
 .about-section h2,
 .contact-section h2,
 .document-section h2 {
@@ -322,8 +320,6 @@ h1, h2, h3, h4 {
     display: block;
     width: fit-content;
     margin-bottom: 1.75rem;
-    border-left: 5px solid var(--accent);
-    padding-left: 0.85rem;
     line-height: 1.2;
 }
 
@@ -421,10 +417,6 @@ h1, h2, h3, h4 {
 /* ========================================
    GAME CARDS
    ======================================== */
-.roblox-section,
-.games-grid-section {
-    margin-bottom: 4rem;
-}
 
 .game-cards {
     display: grid;
@@ -582,56 +574,6 @@ h1, h2, h3, h4 {
 
 .img-arrow.prev { left: 12px; }
 .img-arrow.next { right: 12px; }
-
-/* Roblox card slider */
-.roblox-slider-wrap {
-    position: relative;
-}
-
-.game-cards-track {
-    overflow: hidden;
-}
-
-#robloxTrack {
-    display: flex;
-    gap: 1.5rem;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-#robloxTrack > .game-card {
-    flex: 0 0 calc((100% - 3rem) / 3);
-    min-width: 0;
-}
-
-.cards-arrow {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    background: var(--bg-card);
-    border: 1px solid var(--border-strong);
-    color: var(--text);
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
-    box-shadow: var(--shadow-md);
-    font-size: 1rem;
-}
-
-.cards-arrow:hover {
-    border-color: var(--border-accent);
-    color: var(--accent);
-    background: var(--bg-elevated);
-}
-
-.cards-prev { left: -52px; }
-.cards-next { right: -52px; }
 
 /* Lightbox */
 .lightbox-overlay {
@@ -1398,29 +1340,6 @@ h1, h2, h3, h4 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .roblox-slider-wrap {
-        padding: 0;
-    }
-
-    .game-cards-track {
-        overflow: visible;
-    }
-
-    #robloxTrack {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        transform: none !important;
-        width: auto;
-    }
-
-    #robloxTrack > .game-card {
-        flex: none;
-    }
-
-    .cards-arrow {
-        display: none;
-    }
-
     .documents-grid {
         grid-template-columns: 1fr;
     }
@@ -1473,8 +1392,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 600px) {
-    .game-cards,
-    #robloxTrack {
+    .game-cards {
         grid-template-columns: 1fr;
     }
 
@@ -1504,5 +1422,366 @@ h1, h2, h3, h4 {
 
     html {
         scroll-behavior: auto;
+    }
+}
+
+/* ========================================
+   GAME SHOWCASE (featured + grid)
+   ======================================== */
+.showcase-section {
+    margin-bottom: 4rem;
+}
+
+.featured-games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.game-card.hero {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.game-card.hero .game-card-image {
+    aspect-ratio: auto;
+    min-height: 340px;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+}
+
+.game-card.hero .game-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.game-card.hero h3 {
+    font-size: 1.6rem;
+}
+
+.game-card.hero .game-card-content p {
+    font-size: 1rem;
+}
+
+.platform-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 11;
+    pointer-events: none;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.55rem;
+    color: #FFFFFF;
+    background: rgba(14, 24, 48, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.platform-tag.roblox { border-left: 3px solid #58A6FF; }
+.platform-tag.steam  { border-left: 3px solid #66C0F4; }
+.platform-tag.itchio { border-left: 3px solid #FA5C5C; }
+.platform-tag.github { border-left: 3px solid #A371F7; }
+
+.more-games .platform-cta {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+    .game-card.hero {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card.hero .game-card-image {
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .game-card.hero .game-card-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-games {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Showcase polish */
+.showcase-section:last-child {
+    margin-bottom: 1rem;
+}
+
+/* Equal-height cards with buttons pinned to the bottom */
+.showcase-section .game-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-section .game-card-image {
+    flex-shrink: 0;
+}
+
+.showcase-section .game-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.showcase-section .game-card-content > .play-btn,
+.showcase-section .game-card-content > .dev-btn {
+    margin-top: auto;
+}
+
+.showcase-section .game-roles {
+    margin-bottom: 1.5rem;
+}
+
+.showcase-section .game-stats {
+    margin-bottom: 0.6rem;
+}
+
+/* Soft fade where the screenshot meets the card body */
+.showcase-section .game-card-image::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(8, 14, 30, 0.35), transparent);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Hero card */
+.game-card.hero {
+    display: grid;
+    background: linear-gradient(135deg, var(--accent-dim), var(--bg-card) 55%);
+    border-color: var(--border-accent);
+}
+
+.game-card.hero .game-card-image::after {
+    display: none;
+}
+
+.game-card.hero .game-card-content {
+    padding: 2.5rem;
+}
+
+.game-card.hero h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+}
+
+.game-card.hero .game-stats .visits strong {
+    font-size: 2.6rem;
+}
+
+.game-card.hero .game-stats .visits svg {
+    width: 26px;
+    height: 26px;
+}
+
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--border-accent);
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Featured pair: slightly larger titles than the grid */
+.featured-games .game-card:not(.hero) h3 {
+    font-size: 1.35rem;
+}
+
+/* Profile banners side by side */
+.cta-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.more-games .cta-row .platform-cta {
+    margin-top: 0;
+    padding: 1.5rem;
+}
+
+.cta-row .cta-content {
+    gap: 1.1rem;
+}
+
+@media (max-width: 1100px) {
+    .cta-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .game-card.hero .game-card-content {
+        padding: 1.5rem;
+    }
+
+    .game-card.hero h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Engine badge (top-right of a card image) */
+.engine-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 11;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.55rem;
+    color: #FFFFFF;
+    background: rgba(14, 24, 48, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.engine-tag img {
+    width: 14px;
+    height: 14px;
+}
+
+/* ========================================
+   HOMEPAGE NAV CARDS
+   ======================================== */
+.tabs-home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tab.tab-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 1.4rem 1.4rem 1.3rem;
+    width: auto;
+    max-width: none;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), background 0.25s var(--ease-out);
+}
+
+.tab.tab-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s var(--ease-out);
+}
+
+.tab.tab-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-accent);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-lg);
+}
+
+.tab.tab-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.65rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--border-accent);
+}
+
+.tab-label {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.tab-caption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.tab-arrow {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+.tab.tab-card:hover .tab-arrow {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}
+
+@media (max-width: 1000px) {
+    .tabs-home {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabs-home {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+    .tab.tab-card {
+        width: auto;
+        max-width: none;
+        padding: 1.1rem;
+    }
+
+    .tab-label {
+        font-size: 1.05rem;
     }
 }
