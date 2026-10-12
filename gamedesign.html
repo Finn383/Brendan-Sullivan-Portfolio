@@ -27,169 +27,172 @@
 
     <main class="page-content">
         <div class="container">
-            <!-- Roblox Games -->
-            <section class="roblox-section">
-                <h2 class="section-title">Roblox Games</h2>
-                <div class="roblox-slider-wrap">
-                    <button class="cards-arrow cards-prev" id="robloxPrev" onclick="slideRoblox(-1)">&#10094;</button>
-                    <div class="game-cards-track">
-                        <div class="game-cards" id="robloxTrack">
-                            <div class="game-card animate-on-scroll">
-                                <div class="game-card-image">
-                                    <div class="image-carousel" data-game="settlers">
-                                        <img src="games/catan-1.png" alt="Settlers" class="carousel-img active">
-                                        <img src="games/catan-2.png" alt="Settlers" class="carousel-img">
-                                        <img src="games/catan-3.png" alt="Settlers" class="carousel-img">
-                                        <img src="games/catan-4.png" alt="Settlers" class="carousel-img">
-                                        <img src="games/catan-5.png" alt="Settlers" class="carousel-img">
-                                        <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
-                                        <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="game-card-content">
-                                    <h3>Settlers <span class="game-year">2026</span></h3>
-                                    <p>The classic board game Catan, rebuilt for online multiplayer.</p>
-                                    <ul class="game-roles">
-                                        <li>Led a team of developers, setting milestones and reviewing code</li>
-                                        <li>Built multiplayer game state sync across clients</li>
-                                        <li>Implemented trading, dice events, and turn logic</li>
-                                        <li>Designed data structures for dynamic board generation</li>
-                                    </ul>
-                                    <a href="https://www.roblox.com/games/15871468358/Settlers" class="play-btn small" target="_blank">Play</a>
-                                </div>
+            <!-- Featured Games -->
+            <section class="showcase-section">
+                <h2 class="section-title">Featured Games</h2>
+                <div class="featured-games">
+                    <div class="game-card hero animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag roblox">Roblox</span>
+                            <div class="image-carousel">
+                                <img src="games/areyousure-1.png" alt="Are You Sure?" class="carousel-img active">
+                                <img src="games/areyousure-2.png" alt="Are You Sure?" class="carousel-img">
+                                <img src="games/areyousure-3.png" alt="Are You Sure?" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
                             </div>
-
-                            <div class="game-card animate-on-scroll">
-                                <div class="game-card-image">
-                                    <div class="image-carousel" data-game="zombies">
-                                        <img src="games/zombies-1.png" alt="Untitled Zombies Project" class="carousel-img active">
-                                        <img src="games/zombies-2.png" alt="Untitled Zombies Project" class="carousel-img">
-                                        <img src="games/zombies-3.png" alt="Untitled Zombies Project" class="carousel-img">
-                                        <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
-                                        <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="game-card-content">
-                                    <h3>Untitled Zombies Project <span class="game-year">2026</span></h3>
-                                    <p>A round-based zombies survival game in active development.</p>
-                                    <ul class="game-roles">
-                                        <li>Lead developer, building weapons, enemy AI, and progression with server-side validation</li>
-                                        <li>Recruited and directed a team of animators, modelers, and mappers</li>
-                                    </ul>
-                                    <div class="game-stats">
-                                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Coming Soon</span>
-                                    </div>
-                                    <span class="dev-btn small">In Development</span>
-                                </div>
+                        </div>
+                        <div class="game-card-content">
+                            <span class="eyebrow">Most Played</span>
+                            <div class="game-stats">
+                                <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <strong>4M+</strong> Visits</span>
                             </div>
-
-                            <div class="game-card animate-on-scroll">
-                                <div class="game-card-image">
-                                    <div class="image-carousel" data-game="sai">
-                                        <img src="games/SAI1.png" alt="Steal an Invincible" class="carousel-img active">
-                                        <img src="games/SAI2.png" alt="Steal an Invincible" class="carousel-img">
-                                        <img src="games/SAI3.png" alt="Steal an Invincible" class="carousel-img">
-                                        <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
-                                        <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="game-card-content">
-                                    <h3>Steal an Invincible <span class="game-year">2026</span></h3>
-                                    <p>Race to steal and collect Invincible characters before your opponents.</p>
-                                    <ul class="game-roles">
-                                        <li>Built a real-time competitive loop with anti-cheat validation</li>
-                                        <li>Created a character collection system with rarity tiers</li>
-                                        <li>Tuned game balance through playtesting</li>
-                                    </ul>
-                                    <div class="game-stats">
-                                        <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <strong>500K+</strong> Visits</span>
-                                    </div>
-                                    <a href="https://www.roblox.com/games/104722214376141/Steal-an-Invincible" class="play-btn small" target="_blank">Play</a>
-                                </div>
-                            </div>
-
-                            <div class="game-card animate-on-scroll">
-                                <div class="game-card-image">
-                                    <div class="image-carousel" data-game="areyousure">
-                                        <img src="games/areyousure-1.png" alt="Are You Sure?" class="carousel-img active">
-                                        <img src="games/areyousure-2.png" alt="Are You Sure?" class="carousel-img">
-                                        <img src="games/areyousure-3.png" alt="Are You Sure?" class="carousel-img">
-                                        <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
-                                        <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="game-card-content">
-                                    <h3>Are You Sure? <span class="game-year">2025</span></h3>
-                                    <p>A comedic incremental simulator based on the TV show "Invincible".</p>
-                                    <ul class="game-roles">
-                                        <li>Sole developer, built every game system in Lua</li>
-                                        <li>Engineered the progression loop, shop, and reward scaling</li>
-                                        <li>Ran live updates and bug fixes driven by player feedback</li>
-                                    </ul>
-                                    <div class="game-stats">
-                                        <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <strong>4M+</strong> Visits</span>
-                                    </div>
-                                    <a href="https://www.roblox.com/games/118709296219918/Are-You-Sure" class="play-btn small" target="_blank">Play</a>
-                                </div>
-                            </div>
-
-                            <div class="game-card animate-on-scroll">
-                                <div class="game-card-image">
-                                    <div class="image-carousel" data-game="seeker">
-                                        <img src="games/seeker-1.png" alt="The Seeker" class="carousel-img active">
-                                        <img src="games/seeker-2.png" alt="The Seeker" class="carousel-img">
-                                        <img src="games/seeker-3.png" alt="The Seeker" class="carousel-img">
-                                        <img src="games/seeker-4.png" alt="The Seeker" class="carousel-img">
-                                        <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
-                                        <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="game-card-content">
-                                    <h3>The Seeker <span class="game-year">2021</span></h3>
-                                    <p>A survival horror game where players outwit and escape a monster in the shadows.</p>
-                                    <ul class="game-roles">
-                                        <li>Lead programmer, built all game systems in Lua</li>
-                                        <li>Wrote the original story, lore, and monster backstory</li>
-                                        <li>Programmed enemy AI with pathfinding and detection states</li>
-                                        <li>Designed levels and lighting to build tension</li>
-                                        <li>Built stealth, evasion, and objective mechanics</li>
-                                    </ul>
-                                    <div class="game-stats">
-                                        <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <strong>400+</strong> Visits</span>
-                                    </div>
-                                    <a href="https://www.roblox.com/games/4932435542/The-Seeker" class="play-btn small" target="_blank">Play</a>
-                                </div>
-                            </div>
+                            <h3>Are You Sure? <span class="game-year">2025</span></h3>
+                            <p>A comedic incremental simulator based on the TV show "Invincible".</p>
+                            <ul class="game-roles">
+                                <li>Sole developer, built every game system in Lua</li>
+                                <li>Engineered the progression loop, shop, and reward scaling</li>
+                                <li>Ran live updates and bug fixes driven by player feedback</li>
+                            </ul>
+                            <a href="https://www.roblox.com/games/118709296219918/Are-You-Sure" class="play-btn" target="_blank">View on Roblox</a>
                         </div>
                     </div>
-                    <button class="cards-arrow cards-next" id="robloxNext" onclick="slideRoblox(1)">&#10095;</button>
-                </div>
 
-                <!-- Roblox CTA Banner -->
-                <div class="platform-cta animate-on-scroll">
-                    <div class="cta-glow"></div>
-                    <div class="cta-content">
-                        <div class="cta-icon icon-float">
-                            <img src="https://cdn.simpleicons.org/roblox/FFFFFF" alt="Roblox">
+                    <div class="game-card animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag roblox">Roblox</span>
+                            <div class="image-carousel">
+                                <img src="games/catan-1.png" alt="Settlers" class="carousel-img active">
+                                <img src="games/catan-2.png" alt="Settlers" class="carousel-img">
+                                <img src="games/catan-3.png" alt="Settlers" class="carousel-img">
+                                <img src="games/catan-4.png" alt="Settlers" class="carousel-img">
+                                <img src="games/catan-5.png" alt="Settlers" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
                         </div>
-                        <div class="cta-text">
-                            <h3>Explore My Roblox Profile</h3>
-                            <p>Check out all my games, badges, and community</p>
+                        <div class="game-card-content">
+                            <h3>Settlers <span class="game-year">2026</span></h3>
+                            <p>The classic board game Catan, rebuilt for online multiplayer.</p>
+                            <ul class="game-roles">
+                                <li>Led a team of developers, setting milestones and reviewing code</li>
+                                <li>Built multiplayer game state sync across clients</li>
+                                <li>Implemented trading, dice events, and turn logic</li>
+                                <li>Designed data structures for dynamic board generation</li>
+                            </ul>
+                            <a href="https://www.roblox.com/games/15871468358/Settlers" class="play-btn small" target="_blank">View on Roblox</a>
                         </div>
-                        <a href="https://www.roblox.com/users/20113824/profile" class="cta-btn" target="_blank">
-                            Visit Profile
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                        </a>
+                    </div>
+
+                    <div class="game-card animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag steam">Steam</span>
+                            <span class="engine-tag"><img src="https://cdn.simpleicons.org/unrealengine/FFFFFF" alt="">Unreal Engine</span>
+                            <div class="image-carousel">
+                                <img src="games/eggrtx-1.jpg" alt="Egg RTX" class="carousel-img active">
+                                <img src="games/eggrtx-2.jpg" alt="Egg RTX" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <div class="game-stats">
+                                <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <strong>93K+</strong> Downloads</span>
+                            </div>
+                            <h3>Egg RTX <span class="game-year">2024</span></h3>
+                            <p>A tongue-in-cheek egg clicker with raytracing and advanced shadows, released on Steam.</p>
+                            <ul class="game-roles">
+                                <li>Shipped a free-to-play title on Steam under Figglebottom Studios</li>
+                                <li>Built the click-to-collect loop with a one-million-egg goal</li>
+                                <li>Built in Unreal Engine, showcasing real-time raytraced lighting and shadows</li>
+                            </ul>
+                            <a href="https://store.steampowered.com/app/2838510/Egg_RTX/" class="play-btn small" target="_blank">View on Steam</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Itch.io Games -->
-            <section class="games-grid-section">
-                <h2 class="section-title">Other Games</h2>
+            <!-- All Other Games -->
+            <section class="showcase-section">
+                <h2 class="section-title">More Projects</h2>
                 <div class="game-cards">
                     <div class="game-card animate-on-scroll">
                         <div class="game-card-image">
+                            <span class="platform-tag roblox">Roblox</span>
+                            <div class="image-carousel">
+                                <img src="games/SAI1.png" alt="Steal an Invincible" class="carousel-img active">
+                                <img src="games/SAI2.png" alt="Steal an Invincible" class="carousel-img">
+                                <img src="games/SAI3.png" alt="Steal an Invincible" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <div class="game-stats">
+                                <span class="visits"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <strong>500K+</strong> Visits</span>
+                            </div>
+                            <h3>Steal an Invincible <span class="game-year">2026</span></h3>
+                            <p>Race to steal and collect Invincible characters before your opponents.</p>
+                            <ul class="game-roles">
+                                <li>Built a real-time competitive loop with anti-cheat validation</li>
+                                <li>Created a character collection system with rarity tiers</li>
+                                <li>Tuned game balance through playtesting</li>
+                            </ul>
+                            <a href="https://www.roblox.com/games/104722214376141/Steal-an-Invincible" class="play-btn small" target="_blank">View on Roblox</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag roblox">Roblox</span>
+                            <div class="image-carousel">
+                                <img src="games/zombies-1.png" alt="Untitled Zombies Project" class="carousel-img active">
+                                <img src="games/zombies-2.png" alt="Untitled Zombies Project" class="carousel-img">
+                                <img src="games/zombies-3.png" alt="Untitled Zombies Project" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>Untitled Zombies Project <span class="game-year">2026</span></h3>
+                            <p>A round-based zombies survival game in active development.</p>
+                            <ul class="game-roles">
+                                <li>Lead developer, building weapons, enemy AI, and progression with server-side validation</li>
+                                <li>Recruited and directed a team of animators, modelers, and mappers</li>
+                            </ul>
+                            <span class="dev-btn small">In Development</span>
+                        </div>
+                    </div>
+
+                    <div class="game-card animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag roblox">Roblox</span>
+                            <div class="image-carousel">
+                                <img src="games/seeker-1.png" alt="The Seeker" class="carousel-img active">
+                                <img src="games/seeker-2.png" alt="The Seeker" class="carousel-img">
+                                <img src="games/seeker-3.png" alt="The Seeker" class="carousel-img">
+                                <img src="games/seeker-4.png" alt="The Seeker" class="carousel-img">
+                                <button class="img-arrow prev" onclick="changeImage(this, -1)">&#10094;</button>
+                                <button class="img-arrow next" onclick="changeImage(this, 1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3>The Seeker <span class="game-year">2021</span></h3>
+                            <p>A survival horror game where players outwit and escape a monster in the shadows.</p>
+                            <ul class="game-roles">
+                                <li>Lead programmer, built all game systems in Lua</li>
+                                <li>Wrote the original story, lore, and monster backstory</li>
+                                <li>Programmed enemy AI with pathfinding and detection states</li>
+                                <li>Designed levels and lighting to build tension</li>
+                                <li>Built stealth, evasion, and objective mechanics</li>
+                            </ul>
+                            <a href="https://www.roblox.com/games/4932435542/The-Seeker" class="play-btn small" target="_blank">View on Roblox</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card animate-on-scroll">
+                        <div class="game-card-image">
+                            <span class="platform-tag github">GitHub</span>
                             <div class="image-carousel">
                                 <img src="games/love-1.png" alt="Love in Chernobyl" class="carousel-img active">
                                 <img src="games/love-2.png" alt="Love in Chernobyl" class="carousel-img">
@@ -208,17 +211,18 @@
                                 <li>Developed player progression and scene transitions</li>
                                 <li>Integrated team assets into a working build under deadline</li>
                             </ul>
-                            <a href="https://github.com/Finn383/GD2-Finding-Love-in-Chernobyl" class="play-btn small" target="_blank">Play</a>
+                            <a href="https://github.com/Finn383/GD2-Finding-Love-in-Chernobyl" class="play-btn small" target="_blank">View on GitHub</a>
                         </div>
                     </div>
 
                     <div class="game-card animate-on-scroll">
                         <div class="game-card-image blurfit">
+                            <span class="platform-tag itchio">itch.io</span>
                             <div class="image-carousel">
                                 <div class="blur-bg" style="background-image: url('games/thecastle-1.png')"></div>
-                                <img src="games/thecastle-1.png" alt="The Castle" class="carousel-img active" onload="updateBlur(this)">
-                                <img src="games/thecastle-2.png" alt="The Castle" class="carousel-img" onload="updateBlur(this)">
-                                <img src="games/thecastle-3.png" alt="The Castle" class="carousel-img" onload="updateBlur(this)">
+                                <img src="games/thecastle-1.png" alt="The Castle" class="carousel-img active">
+                                <img src="games/thecastle-2.png" alt="The Castle" class="carousel-img">
+                                <img src="games/thecastle-3.png" alt="The Castle" class="carousel-img">
                                 <button class="img-arrow prev" onclick="changeImageBlur(this, -1)">&#10094;</button>
                                 <button class="img-arrow next" onclick="changeImageBlur(this, 1)">&#10095;</button>
                             </div>
@@ -231,12 +235,13 @@
                                 <li>Applied pacing, feedback loops, and challenge curves</li>
                                 <li>Built within the constraints of the Bitsy engine</li>
                             </ul>
-                            <a href="https://bmsullivan4.itch.io/the-castle" class="play-btn small" target="_blank">Play</a>
+                            <a href="https://bmsullivan4.itch.io/the-castle" class="play-btn small" target="_blank">View on itch.io</a>
                         </div>
                     </div>
 
                     <div class="game-card animate-on-scroll">
                         <div class="game-card-image">
+                            <span class="platform-tag itchio">itch.io</span>
                             <img src="games/cinemoji.png" alt="CineMoji" class="single-img">
                         </div>
                         <div class="game-card-content">
@@ -247,30 +252,51 @@
                                 <li>Wrote the game logic and UI in React, with answer validation and scoring</li>
                                 <li>Curated a puzzle dataset across difficulty levels</li>
                             </ul>
-                            <a href="https://bmsullivan4.itch.io/" class="play-btn small" target="_blank">Play</a>
+                            <a href="https://bmsullivan4.itch.io/" class="play-btn small" target="_blank">View on itch.io</a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Itch.io CTA Banner -->
-                <div class="platform-cta itchio-cta animate-on-scroll">
-                    <div class="cta-glow"></div>
-                    <div class="cta-content">
-                        <div class="cta-icon icon-float">
-                            <img src="https://static.itch.io/images/itchio-textless-white.svg" alt="Itch.io">
-                        </div>
-                        <div class="cta-text">
-                            <h3>Discover More on Itch.io</h3>
-                            <p>Play my indie games and experimental projects</p>
-                        </div>
-                        <a href="https://bmsullivan4.itch.io/" class="cta-btn itchio" target="_blank">
-                            Visit Profile
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                        </a>
                     </div>
                 </div>
             </section>
 
+            <!-- Platform profiles -->
+            <section class="showcase-section more-games">
+                <h2 class="section-title">Find More of My Games</h2>
+                <div class="cta-row">
+                    <div class="platform-cta animate-on-scroll">
+                        <div class="cta-glow"></div>
+                        <div class="cta-content">
+                            <div class="cta-icon icon-float">
+                                <img src="https://cdn.simpleicons.org/roblox/FFFFFF" alt="Roblox">
+                            </div>
+                            <div class="cta-text">
+                                <h3>Explore My Roblox Profile</h3>
+                                <p>Check out all my games, badges, and community</p>
+                            </div>
+                            <a href="https://www.roblox.com/users/20113824/profile" class="cta-btn" target="_blank">
+                                Visit Profile
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="platform-cta itchio-cta animate-on-scroll">
+                        <div class="cta-glow"></div>
+                        <div class="cta-content">
+                            <div class="cta-icon icon-float">
+                                <img src="https://static.itch.io/images/itchio-textless-white.svg" alt="Itch.io">
+                            </div>
+                            <div class="cta-text">
+                                <h3>Discover More on Itch.io</h3>
+                                <p>Play my indie games and experimental projects</p>
+                            </div>
+                            <a href="https://bmsullivan4.itch.io/" class="cta-btn itchio" target="_blank">
+                                Visit Profile
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -335,30 +361,6 @@
             images[newIndex].classList.add('active');
             blurBg.style.backgroundImage = `url('${images[newIndex].src}')`;
         }
-
-        // Roblox card slider
-        let robloxPage = 0;
-
-        function slideRoblox(direction) {
-            const track = document.getElementById('robloxTrack');
-            const cards = track.querySelectorAll('.game-card');
-            const maxPage = cards.length - 3;
-
-            robloxPage = Math.max(0, Math.min(maxPage, robloxPage + direction * 3));
-
-            track.style.transform = `translateX(-${cards[robloxPage].offsetLeft}px)`;
-
-            const prev = document.getElementById('robloxPrev');
-            const next = document.getElementById('robloxNext');
-            prev.style.opacity = robloxPage > 0 ? '1' : '0.35';
-            prev.style.pointerEvents = robloxPage > 0 ? 'auto' : 'none';
-            next.style.opacity = robloxPage < maxPage ? '1' : '0.35';
-            next.style.pointerEvents = robloxPage < maxPage ? 'auto' : 'none';
-        }
-
-        // Init roblox slider arrow states
-        document.getElementById('robloxPrev').style.opacity = '0.35';
-        document.getElementById('robloxPrev').style.pointerEvents = 'none';
 
         // Lightbox
         let activeLightboxCarousel = null;
